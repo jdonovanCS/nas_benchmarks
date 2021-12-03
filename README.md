@@ -10,13 +10,21 @@ To download the datasets for the FC-Net benchmark:
     wget http://ml4aad.org/wp-content/uploads/2019/01/fcnet_tabular_benchmarks.tar.gz
     tar xf fcnet_tabular_benchmarks.tar.gz
     
-The data for NASBench is available [here](https://github.com/google-research/nasbench).
+The data for NASBench is available [here](https://github.com/google-research/nasbench). These are nasbench_full.tfrecord and nasbench_108.tfrecord
+The nasbench repo will also be needed. To install it type:
 
-To install it, type:
+    git clone https://github.com/automl/nasbench.git
+    cd nasbench
+    python setup.py install
+
+To install the nas_benchmarks repo, type:
 
     git clone https://github.com/automl/nas_benchmarks.git
     cd nas_benchmarks
     python setup.py install
+    
+If a tensorflow error is thrown on import, try:
+    pip install tensorflow-gpu==1.15
    
  The following example shows how to load the benchmark and to evaluate a random hyperparameter configuration:
   
